@@ -2213,7 +2213,7 @@ figure {
 .container {
   flex-direction: column;
   width: 100%;
-  max-width: 80rem;
+  max-width: 90rem;
   padding-left: 2rem;
   padding-right: 2rem;
   display: flex;
@@ -3472,7 +3472,7 @@ figure {
 
 .hero {
   background-color: var(--brand--color--green-light);
-  padding-top: 8.5rem;
+  padding-top: 3rem;
   padding-bottom: 3rem;
 }
 
@@ -4386,4 +4386,80 @@ figure {
   #w-node-_5acbce0e-c562-2207-8890-9cdd06afc009-0ecbaa75 {
     grid-area: span 1 / span 1 / span 1 / span 1;
   }
+}
+
+#map-container {
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+.fullscreen-icon { 
+  background-image: url(images/icon-fullscreen.svg); 
+  background-size: 26px 52px; 
+}
+
+.fullscreen-icon.leaflet-fullscreen-on { 
+  background-position: 0 -26px; 
+}
+
+.leaflet-touch .fullscreen-icon { 
+  background-position: 2px 2px; 
+}
+
+.leaflet-touch .fullscreen-icon.leaflet-fullscreen-on { 
+  background-position: 2px -24px; 
+}
+
+/* one selector per rule as explained here : http://www.sitepoint.com/html5-full-screen-api/ */
+.leaflet-container:-webkit-full-screen { 
+  width: 100% !important; 
+  height: 100% !important; 
+  z-index: 99999; 
+}
+
+.leaflet-container:-ms-fullscreen { 
+  width: 100% !important; 
+  height: 100% !important; 
+  z-index: 99999; 
+}
+
+.leaflet-container:full-screen { 
+  width: 100% !important; 
+  height: 100% !important; 
+  z-index: 99999; 
+}
+
+.leaflet-container:fullscreen { 
+  width: 100% !important; 
+  height: 100% !important; 
+  z-index: 99999; 
+}
+
+.leaflet-pseudo-fullscreen { 
+  position: fixed !important; 
+  width: 100% !important; 
+  height: 100% !important; 
+  top: 0px !important; 
+  left: 0px !important; 
+  z-index: 99999; 
+}
+
+/* Style the popup link */
+.popup-link {
+    text-decoration: none;
+    color: #007bff; /* Adjust color */
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.popup-link:hover {
+    text-decoration: underline;
+    color: #0056b3; /* Darker shade */
 }
