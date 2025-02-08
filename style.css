@@ -4029,7 +4029,7 @@ figure {
 
   .rsvp-grid {
     grid-column-gap: 1.5rem;
-    grid-row-gap: 1.5rem;
+    grid-row-gap: 0rem;
     grid-template-columns: 1fr;
   }
 
@@ -4497,7 +4497,7 @@ figure {
 
 .schedule-item {
   display: grid;
-  grid-template-columns: 1fr 2fr; /* Adjusts to mobile */
+  grid-template-columns: 120px auto; /* Keep time narrow and text wide */
   align-items: center;
   gap: 1rem;
   padding: 0.5rem 1rem;
@@ -4506,22 +4506,21 @@ figure {
 }
 
 .schedule-item p {
-  font-size: clamp(14px, 1rem, 20px);
+  font-size: clamp(16px, 1.5rem, 22px); /* Original font size */
   font-weight: bold;
   text-align: left;
-  overflow-wrap: break-word; /* Allow long words to break */
-  white-space: normal; /* Allow wrapping */
+  white-space: nowrap; /* Keep time on one line */
 }
 
 .schedule-item h2 {
-  font-size: clamp(16px, 1.3rem, 22px);
+  font-size: clamp(18px, 1.8rem, 24px); /* Original font size */
   text-align: left;
-  overflow-wrap: break-word; /* Allow long words to break */
   white-space: normal; /* Allow wrapping */
+  word-break: break-word; /* Ensure long words break */
 }
 
 .center-heading-wrapper {
   text-align: center;
   margin-bottom: 20px;
-  font-size: clamp(20px, 2rem, 32px);
+  font-size: clamp(20px, 2.5rem, 36px);
 }
