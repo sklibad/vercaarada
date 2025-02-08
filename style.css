@@ -4471,13 +4471,11 @@ figure {
 }
 
 #FAQ {
-  min-height: 100vh; /* Full viewport height */
   display: flex;
   flex-direction: column;
 }
 
 #Schedule {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
