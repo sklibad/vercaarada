@@ -198,13 +198,21 @@
     </section>
 
     <script type="text/javascript">
+        // Function to check if the user is on a mobile device
+        function isMobileDevice() {
+            return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+        }
+
+        // Set the zoom level based on device type
+        var initialZoom = isMobileDevice() ? 10 : 11;
+
         var map = L.map('map', {
             fullscreenControl: true,
             fullscreenControlOptions: {
                 title: "Open fullscreen",
                 titleCancel: "Exit fullscreen"
             }
-        }).setView([49.05663880088731, 17.00139494879713], 11);
+        }).setView([49.05663880088731, 17.00139494879713], initialZoom);
 
         var OSmap = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
