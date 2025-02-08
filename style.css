@@ -4487,7 +4487,6 @@ figure {
 
 .schedule-container {
   padding-top: 2rem;
-  padding-left: 15rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between; /* Even spacing */
