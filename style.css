@@ -224,7 +224,7 @@ body {
   background-color: #fff;
   min-height: 100%;
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: var(--primary-font);
   font-size: 14px;
   line-height: 20px;
 }
@@ -2357,8 +2357,8 @@ figure {
 
 .paragraph-16 {
   color: var(--brand--primary--action);
-  font-family: Jost, sans-serif;
-  font-size: 1rem;
+  font-family: var(--primary-font);
+  font-size: 1.2rem;
   line-height: 1.5rem;
 }
 
