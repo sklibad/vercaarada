@@ -4500,8 +4500,7 @@ figure {
   display: grid;
   grid-template-columns: 120px auto; /* Keep time narrow and text wide */
   align-items: center;
-  gap: 1rem;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1rem 0.5rem 2rem;
   width: 100%;
   border-bottom: 1px solid #ddd; /* Optional for better spacing */
 }
