@@ -4477,53 +4477,50 @@ figure {
 }
 
 #Schedule {
-  min-height: 100vh; /* Full viewport height */
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Center vertically */
-  align-items: center; /* Center horizontally */
+  justify-content: center;
+  align-items: center;
   padding: 20px;
 }
 
 .schedule-container {
   padding-top: 2rem;
-  padding-left: 15rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* Even spacing */
-  align-items: center;
-  height: 60vh; /* Scale to 80% of viewport height */
-  width: 50vw; /* Scale to 50% of viewport width */
-  max-width: 80rem; /* Prevent it from getting too large */
-  min-width: 40rem; /* Prevent it from getting too small */
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem; /* Space between items */
+  width: 100%;
+  max-width: 50rem; /* Set a max width for responsiveness */
+  min-width: 300px; /* Prevent it from shrinking too much */
 }
 
 .schedule-item {
-  display: flex;
-  gap: 2rem;
+  display: grid;
+  grid-template-columns: 100px auto;
   align-items: center;
-  flex-grow: 1; /* Make items take up equal space */
+  gap: 1rem;
+  padding: 0.5rem 1rem;
   width: 100%;
-  letter-spacing: 0.05em;
+  border-bottom: 1px solid #ddd; /* Optional for better spacing */
+  white-space: nowrap; /* Prevent text from wrapping */
 }
 
 .schedule-item p {
-  width: 100px; /* Fixed width for alignment */
-  text-align: left;
-  font-size: clamp(14px, 2vw, 24px); /* Responsive font size */
+  font-size: clamp(16px, 1.5rem, 22px);
   font-weight: bold;
-  margin: 0;
+  text-align: left;
+  white-space: nowrap;
 }
 
 .schedule-item h2 {
-  flex-grow: 1;
+  font-size: clamp(18px, 1.8rem, 24px);
   text-align: left;
-  font-size: clamp(16px, 2.5vw, 28px); /* Responsive font size */
-  margin: 0;
+  white-space: nowrap;
 }
 
 .center-heading-wrapper {
   text-align: center;
   margin-bottom: 20px;
-  font-size: clamp(20px, 3vw, 36px); /* Scale title size */
+  font-size: clamp(20px, 2.5rem, 36px);
 }
