@@ -2064,6 +2064,8 @@ textarea.w-input, textarea.w-select {
   --brand--color--red\<deleted\|variable-77654926-6933-b517-4f60-3f21b1974730\>: #ca4949;
   --brand--color--red-light\<deleted\|variable-dad8a357-8cda-10cf-b0ed-9cc89fda3963\>: #f8e2e2;
   --brand--neutrals--black: black;
+  --primary-font: "Gloock", "Cinzel", "Cormorant Unicase", serif;
+  --primary-font-sans: "Prata", "Forum", "Playfair Display SC", sans-serif;
 }
 
 .w-layout-blockcontainer {
@@ -2105,7 +2107,7 @@ body {
   color: var(--text--default--dark-text);
   flex-direction: column;
   min-height: 100%;
-  font-family: Montaga, sans-serif;
+  font-family: var(--primary-font);
   font-size: 1rem;
   line-height: 100%;
   display: flex;
@@ -4466,4 +4468,62 @@ figure {
 .popup-link:hover {
     text-decoration: underline;
     color: #0056b3; /* Darker shade */
+}
+
+#FAQ {
+  min-height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+}
+
+#Schedule {
+  min-height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  padding: 20px;
+}
+
+.schedule-container {
+  padding-top: 2rem;
+  padding-left: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Even spacing */
+  align-items: center;
+  height: 60vh; /* Scale to 80% of viewport height */
+  width: 50vw; /* Scale to 50% of viewport width */
+  max-width: 80rem; /* Prevent it from getting too large */
+  min-width: 40rem; /* Prevent it from getting too small */
+}
+
+.schedule-item {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-grow: 1; /* Make items take up equal space */
+  width: 100%;
+  letter-spacing: 0.05em;
+}
+
+.schedule-item p {
+  width: 100px; /* Fixed width for alignment */
+  text-align: left;
+  font-size: clamp(14px, 2vw, 24px); /* Responsive font size */
+  font-weight: bold;
+  margin: 0;
+}
+
+.schedule-item h2 {
+  flex-grow: 1;
+  text-align: left;
+  font-size: clamp(16px, 2.5vw, 28px); /* Responsive font size */
+  margin: 0;
+}
+
+.center-heading-wrapper {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: clamp(20px, 3vw, 36px); /* Scale title size */
 }
