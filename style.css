@@ -2049,8 +2049,8 @@ textarea.w-input, textarea.w-select {
 
 :root {
   --brand--neutrals--light-background: #fefefe;
-  --text--default--dark-text: #18311d;
-  --brand--primary--action: #182e1c;
+  --text--default--dark-text: #61644c;
+  --brand--primary--action: #717559;
   --brand--primary--action-pressed: #0a0a0a;
   --brand--primary--action-hover: #071300;
   --text--default--medium-text: #2b412f;
