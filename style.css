@@ -4394,6 +4394,65 @@ figure {
   }
 }
 
+/* Ensure grid switches to vertical layout when screen is smaller */
+@media screen and (max-width: 991px) {
+  .hero-grid, .rsvp-grid {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+  }
+
+  .hero-image-wrapper, .hero-text-wrapper,
+  .rsvp-text-container, #map-container {
+      width: 100%;
+      max-width: 600px; /* Prevents content from being too wide */
+      text-align: center;
+  }
+
+  /* Ensure images fit well */
+  .hero-image-inner-wrapper, .hero-image {
+      width: 90%;
+      max-width: 400px;
+  }
+
+  /* Ensure map is visible on mobile */
+  #map-container {
+      height: 300px; /* Adjust map height for mobile */
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hero-text-wrapper {
+      text-align: center;
+  }
+
+  .rsvp-grid {
+      gap: 1.5rem; /* Reduce space between items for better mobile fit */
+  }
+
+  /* Ensure text is centered on small screens */
+  .paragraph-20, .paragraph-18 {
+      text-align: center;
+  }
+
+  /* Prevents hero image from being too small */
+  .hero-image-inner-wrapper, .hero-image {
+      width: 100%;
+      max-width: 350px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .hero-image-inner-wrapper, .hero-image {
+      max-width: 300px; /* Adjust for very small screens */
+  }
+
+  #map-container {
+      height: 250px; /* Adjust map height for smaller screens */
+  }
+}
+
 #map-container {
   width: 100%;
   height: 100%;
