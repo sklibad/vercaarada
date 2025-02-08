@@ -4480,6 +4480,7 @@ figure {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .schedule-container {
@@ -4490,34 +4491,37 @@ figure {
   width: 100%;
   max-width: 50rem; /* Set a max width for responsiveness */
   min-width: 300px; /* Prevent it from shrinking too much */
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .schedule-item {
   display: grid;
-  grid-template-columns: 100px auto;
+  grid-template-columns: 1fr 2fr; /* Adjusts to mobile */
   align-items: center;
   gap: 1rem;
   padding: 0.5rem 1rem;
   width: 100%;
   border-bottom: 1px solid #ddd; /* Optional for better spacing */
-  white-space: nowrap; /* Prevent text from wrapping */
 }
 
 .schedule-item p {
-  font-size: clamp(16px, 1.5rem, 22px);
+  font-size: clamp(14px, 1rem, 20px);
   font-weight: bold;
   text-align: left;
-  white-space: nowrap;
+  overflow-wrap: break-word; /* Allow long words to break */
+  white-space: normal; /* Allow wrapping */
 }
 
 .schedule-item h2 {
-  font-size: clamp(18px, 1.8rem, 24px);
+  font-size: clamp(16px, 1.3rem, 22px);
   text-align: left;
-  white-space: nowrap;
+  overflow-wrap: break-word; /* Allow long words to break */
+  white-space: normal; /* Allow wrapping */
 }
 
 .center-heading-wrapper {
   text-align: center;
   margin-bottom: 20px;
-  font-size: clamp(20px, 2.5rem, 36px);
+  font-size: clamp(20px, 2rem, 32px);
 }
